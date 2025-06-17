@@ -24,7 +24,7 @@ const loginForm = () => {
     <p><input type='password' id='txtPass1'></p>
     <p><button onclick='validateUser()'>Submit</button></p>
     <p><button onclick='registerForm()'>Create Account</button></p>
-    `;
+    <p><button onclick='showUsers()'>Show Registered Users</button></p>`;
   root.innerHTML = str + "</div>";
 };
 
@@ -61,4 +61,23 @@ const showHome = () => {
     <p><button onclick='loginForm()'>Logout</button></p>
     `;
   root.innerHTML = str + "</div>";
+};
+
+const showUsers = () => {
+ if (users.length === 0) {
+    root.innerHTML = "<p>No registered users found.</p><p><button onclick='loginForm()'>Back</button></p>";
+ return;
+ }
+
+let str = `<div>
+<h3>Registered Users</h3>
+<ul>`;
+users.forEach((user, index) => {
+str += `<li>${index + 1}. Name: ${user.name}, Email: ${user.email}</li>`;
+ });
+str += `</ul>
+<p><button onclick='loginForm()'>Back to Login</button></p>
+</div>`;
+
+ root.innerHTML = str;
 };
