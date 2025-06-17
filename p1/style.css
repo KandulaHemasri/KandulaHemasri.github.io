@@ -1,52 +1,19 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.container{
+    display: flex;
+    justify-content: center;
+    border: 2px;
+    margin: 20px;
+
 }
 
-/* Body with animated gradient background */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient(-45deg, #ffecd2, #fcb69f, #a1c4fd, #c2e9fb);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
+.container div{
+    align-items: center;
+    border: 1px solid gray;
+    margin: 10px;
 }
 
-/* @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-} */
 
-/* Glass-like card container */
-.container {
-  backdrop-filter: blur(15px);
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.3);
-  padding: 40px 30px;
-  width: 100%;
-  max-width: 400px;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Title */
-h2 {
-  text-align: center;
-  margin-bottom: 25px;
-  font-size: 26px;
-  font-weight: 700;
-  color: #fff;
-}
-
-/* Form Fields */
-.form-group {
+form-group {
   margin-bottom: 20px;
 }
 
@@ -54,77 +21,6 @@ label {
   font-size: 14px;
   display: block;
   margin-bottom: 8px;
-  color: #f8f8f8;
-  font-weight: 500;
-}
-
-input {
-  width: 100%;
-  padding: 12px 15px;
-  font-size: 15px;
-  border: none;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  /* transition: background 0.3s, box-shadow 0.3s; */
-}
-
-input:focus {
-  outline: none;
-  background: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 0 5px #fff;
-}
-
-/* Button */
-button {
-  width: 100%;
-  padding: 12px;
-  background: #ffffff;
-  color: #333;
-  font-weight: bold;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button:hover {
-  background: #f4f4f4;
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Toggle login/signup */
-.toggle {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 14px;
   color: black;
-}
-
-.toggle a {
-  color:black;
-  cursor: pointer;
-  font-weight: 600;
-  text-decoration: underline;
-}
-
-/* Message */
-.message {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-  font-weight: bold;
-  transition: 0.3s ease;
-}
-
-/* For smaller screens */
-@media (max-width: 480px) {
-  .container {
-    padding: 30px 20px;
-  }
-  h2 {
-    font-size: 22px;
-  }
+  font-weight: 500;
 }

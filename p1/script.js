@@ -1,75 +1,85 @@
-let isLogin = false;
+let users = [];
+let user = {};
 
-let users = JSON.parse(localStorage.getItem("users")) || [];
-
-function toggleForm() {
-  isLogin = !isLogin;
-  document.getElementById('form-title').innerText = isLogin ? "Login" : "Create Account";
-  document.getElementById('toggle-text').innerText = isLogin ? "Don't have an account?" : "Already have an account?";
-  document.querySelector('.toggle a').innerText = isLogin ? "Create Account" : "Login";
-  document.getElementById('name-group').style.display = isLogin ? "none" : "block";
-  document.getElementById('message').innerText = '';
-  document.getElementById('name').value = '';
-  document.getElementById('email').value = '';
-  document.getElementById('password').value = '';
-}
-
-function validateEmail(email) {
-  const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return re.test(email);
-}
-
-function validatePassword(password) {
-  return password.length >= 6;
-}
-
-function handleSubmit() {
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const password = document.getElementById('password').value.trim();
-  const message = document.getElementById('message');
-
-  if (!validateEmail(email)) {
-    message.style.color = 'red';
-    message.innerText = "Invalid email format.";
-    return;
-  }
-
-  if (!validatePassword(password)) {
-    message.style.color = 'red';
-    message.innerText = "Password must be at least 6 characters.";
-    return;
-  }
-
-  if (isLogin) {
-    const user = users.find(u => u.email === email && u.password === password);
-    if (user) {
-      message.style.color = 'green';
-      message.innerText = `Welcome ${user.name}!`;
-    } else {
-      message.style.color = 'red';
-      message.innerText = "Access Denied.";
-    }
+const validateUser = () => {
+  let email = document.getElementById("txtEmail1").value;
+  let pass = document.getElementById("txtPass1").value;
+  const found = users.find(
+    (value) => value.email === email && value.pass === pass
+  );
+  if (found) {
+    showHome();
   } else {
-    if (!name) {
-      message.style.color = 'red';
-      message.innerText = "Please enter your name.";
-      return;
-    }
-
-    const exists = users.find(u => u.email === email);
-    if (exists) {
-      message.style.color = 'red';
-      message.innerText = "Email already registered.";
-      return;
-    }
-
-    const newUser = { name, email, password };
-    users.push(newUser);
-    localStorage.setItem("users", JSON.stringify(users));
-
-    message.style.color = 'green';
-    message.innerText = "Account created successfully. You can now login.";
-    toggleForm();
+    document.getElementById("errorTxt").innerHTML = "Access Denied";
   }
-}
+};
+
+const loginForm = () => {
+  const str = `<div>
+    <h3>Login Form</h3>
+    <p id='errorTxt'></p>
+    <label for="email">Email</label>
+    <p><input type='text' id='txtEmail1'></p>
+     <label for="password">Password</label>
+    <p><input type='password' id='txtPass1'></p>
+    <p><button onclick='validateUser()'>Submit</button></p>
+    <p><button onclick='registerForm()'>Create Account</button></p>
+    <p><button onclick='showUsers()'>Show Registered Users</button></p>
+    `;
+  root.innerHTML = str + "</div>";
+};
+
+const saveUser = () => {
+  let name = document.getElementById("txtName").value;
+  let email = document.getElementById("txtEmail").value;
+  let pass = document.getElementById("txtPass").value;
+  users.push({
+    name,
+    email,
+    pass,
+  });
+  loginForm();
+};
+
+const registerForm = () => {
+  const str = `<div>
+    <h3>Registration Form</h3>
+     <label for="name">Name</label>
+    <p><input type='text' id='txtName'></p>
+     <label for="email">Email</label>
+    <p><input type='text' id='txtEmail'></p>
+     <label for="password">Password</label>
+    <p><input type='password' id='txtPass'></p>
+    <p><button onclick='saveUser()'>Submit</button></p>
+    <p><button onclick='loginForm()'>Already a member? Login here...</button></p>
+    `;
+  root.innerHTML = str + "</div>";
+};
+
+const showHome = () => {
+  const str = `<div>
+    <h3>Welcome</h3>
+    <p><button onclick='loginForm()'>Logout</button></p>
+    `;
+  root.innerHTML = str + "</div>";
+};
+
+
+const showUsers = () => {
+ if (users.length === 0) {
+    root.innerHTML = "<p>No registered users found.</p><p><button onclick='loginForm()'>Back</button></p>";
+ return;
+ }
+
+let str = `<div>
+<h3>Registered Users</h3>
+<ul>`;
+users.forEach((user, index) => {
+str += `<li>${index + 1}. Name: ${user.name}, Email: ${user.email}</li>`;
+ });
+str += `</ul>
+<p><button onclick='loginForm()'>Back to Login</button></p>
+</div>`;
+
+ root.innerHTML = str;
+};
