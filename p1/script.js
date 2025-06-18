@@ -9,7 +9,7 @@ const validateUser = () => {
   );
   if (found) {
     showHome();
-  } else {
+  } else { 
     document.getElementById("errorTxt").innerHTML = "Access Denied";
   }
 };
@@ -82,4 +82,3 @@ str += `</ul>
 
  root.innerHTML = str;
 };
-
