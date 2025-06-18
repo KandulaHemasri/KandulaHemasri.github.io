@@ -24,8 +24,7 @@ const loginForm = () => {
     <p><input type='password' id='txtPass1'></p>
     <p><button onclick='validateUser()'>Submit</button></p>
     <p><button onclick='registerForm()'>Create Account</button></p>
-    <p><button onclick='showUsers()'>Show Registered Users</button></p>
-    `;
+    <p><button onclick='showUsers()'>Show Registered Users</button></p>`;
   root.innerHTML = str + "</div>";
 };
 
@@ -64,7 +63,6 @@ const showHome = () => {
   root.innerHTML = str + "</div>";
 };
 
-
 const showUsers = () => {
  if (users.length === 0) {
     root.innerHTML = "<p>No registered users found.</p><p><button onclick='loginForm()'>Back</button></p>";
@@ -83,3 +81,4 @@ str += `</ul>
 
  root.innerHTML = str;
 };
+
