@@ -9,7 +9,7 @@
 .container div{
     align-items: center;
     border: 1px solid gray;
-    margin: 10px;
+    margin: 20px;
 }
 
 
@@ -24,3 +24,4 @@ label {
   color: black;
   font-weight: 500;
 }
+

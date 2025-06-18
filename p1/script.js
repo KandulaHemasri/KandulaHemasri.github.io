@@ -16,6 +16,7 @@ const validateUser = () => {
 
 const loginForm = () => {
   const str = `<div>
+    <h1>My Bank</h1>
     <h3>Login Form</h3>
     <p id='errorTxt'></p>
     <label for="email">Email</label>
