@@ -39,7 +39,10 @@
             <label>Email:</label>
             <p><input type="email" placeholder="Enter your email" required/></p>
             <label>Password:</label>
-            <p><input type="number" placeholder="Enter your password" required/></p>
+            <p><input type="password" placeholder="Enter your password" required/></p>
+            <label>Age:</label>
+            <p><input type="number" required/></p>
+            <p><legend>comment:</legend><textarea rows="5" cols="50" placeholder="about me"></textarea></p>
             <input type="date"/>
 
             <p>
@@ -51,7 +54,7 @@
                 <input type="radio" name="batch">Morning Batch
                 <input type="radio" name="batch">Evening Batch
             </p>
-            <P>
+            <P>Education:
                 <select >
                     <option selected>B.Tech</option>
                     <option>MBA</option>
@@ -59,7 +62,35 @@
                     <option>B.Arch</option>
                 </select>
             </P>
-            <button>Login</button>
+            <p>choose file:<input type="file"/></p>
+            <p>place:
+                <select>
+                    <optgroup label="India">
+                        <option>Delhi</option>
+                        <option>Vizag</option>
+                        <option>Hyderabad</option>
+                    </optgroup>
+                    <optgroup label="USA">
+                        <option>Colombus</option>
+                        <option>Miami</option>
+                        <option>California</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p><input type="color"/></p>
+            <p><label for="c1">Remember me</label><input type="checkbox" id="c1"/></p>
+            <P>
+                <input list ="country"/>
+                <datalist id="country">
+                    <option>India</option>
+                    <option>Russia</option>
+                    <option>America</option>
+                    <option>Canada</option>
+                    <option>Europe</option>
+                </datalist>
+            </P>
+            <button style="color:black; size: 20px;background-color:aquamarine; border-radius:10px;">Login</button>
+            <input type="reset">
         </form>
     </fieldset>
 </body>
