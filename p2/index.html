@@ -1,17 +1,513 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food mart Grocery store</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    <header class="top-nav">
-        <div class="logo"><strong>Food Mart</strong><br><span>Grocery Website</span></div>
-        <input type="text" placeholder="Search for morethan 20,000 products" class="Search-box"/>
-    </header>
+    <section class="header">
+        <div class="main-header">
+            <div class="logo-container">
+                <img src="images/logo.png" alt="logo" class="logo" />
+            </div>
+            <div class="search-container">
+                <div class="box">
+                    <select name="" id="">
+                        <option value="" disabled selected>All Categories</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="beverages">Beverages</option>
+                        <option value="snacks">Snacks</option>
+                        <option value="bakery">Bakery</option>
+                        <option value="frozen-foods">Frozen Foods</option>
+                        <option value="meat">Meat</option>
+                        <option value="seafood">Seafood</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="Search for more than 20000 products" class="search-input" />
+                    <button class="search-button">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="support">
+                <div class="support-text">
+                    <p>For Support?</p>
+                    <p>+980-34984089</p>
+                </div>
+            </div>
+            <div class="icons">
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="cart">
+                <div class="box">
+                    <select name="cart" id="cart">
+                        <option value="" disabled selected>Your Cart</option>
+                        <option value="item1">Item 1</option>
+                        <option value="item2">Item 2</option>
+                        <option value="item3">Item 3</option>
+                    </select>
+                </div>
+                <div class="price">
+                    <p>$1290.00</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="nav-section">
+        <div class="shop">
+            <div class="shop-text">
+                <p>Shop by Departments</p>
+            </div>
+            <div class="shop-icon">
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </div>
+        <div class="items">
+            <ul>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Brand</a></li>
+                <div class="pages">
+                    <p>Pages</p>
+                    <div class="pages-icon">
+                        <i class="fa-solid fa-caret-down"></i>
+                    </div>
+                </div>
+                <li><a href="#">Sale</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="main-hero">
+        <section class="left">
+            <div class="hero">
+                <div class="box1">
+                    <div class="hero-text">
+                        <p>100% Natural</p>
+                        <h1>Fresh Smoothies <br />& Summer Juice</h1>
+                        <p class="desc">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                            Placeat cum aliquam, est quaerat fuga facilis.
+                        </p>
+                        <button class="hero-button">Shop Now</button>
+                    </div>
+                    <div class="hero-image">
+                        <img src="images/product-thumb-1.png" alt="hero image" class="hero-img" />
+                    </div>
+                </div>
+                <div class="box2">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="right">
+            <div class="box1">
+                <img src="images/slide-3.jpg" alt="hero image" class="hero1-img" />
+                <div class="hero1-text">
+                    <h2>20% Off</h2>
+                    <p><span class="line"></span>SALE</p>
+                    <h1>Fruits &<br />Vegetables</h1>
+                    <p>
+                        <span>Shop Collections</span><i class="fa-solid fa-arrow-right"></i>
+                    </p>
+                </div>
+            </div>
+            <div class="box2">
+                <img src="images/slide-4.jpg" alt="hero image" class="hero1-img" />
+                <div class="hero1-text">
+                    <h2>15% Off</h2>
+                    <p><span class="line"></span>SALE</p>
+                    <h1>Baked Products</h1>
+                    <p>
+                        <span>Shop Collections</span><i class="fa-solid fa-arrow-right"></i>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="categories">
+        <div class="topHead">
+            <div class="leftHead">
+                <p>Category</p>
+            </div>
+            <div class="rightHead">
+                <p>View All Categories</p>
+                <div class="arrows">
+                    <i class="fa-solid fa-caret-down fa-rotate-90"></i>
+                    <i class="fa-solid fa-caret-down fa-rotate-270"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="beverages">
+        <div class="bev">
+            <img src="images/icon-vegetables-broccoli.png" alt="" />
+            <p>Fruits & Veges</p>
+        </div>
+        <div class="bev">
+            <img src="images/icon-bread-baguette.png" alt="" />
+            <p>Fruits & Veges</p>
+        </div>
+        <div class="bev">
+            <img src="images/icon-animal-products-drumsticks.png" alt="" />
+            <p>Fruits & Veges</p>
+        </div>
+        <div class="bev">
+            <img src="images/icon-bread-herb-flour.png" alt="" />
+            <p>Fruits & Veges</p>
+        </div>
+        <div class="bev">
+            <img src="images/icon-soft-drinks-bottle.png" alt="" />
+            <p>Fruits & Veges</p>
+        </div>
+        <div class="bev">
+            <img src="images/icon-wine-glass-bottle.png" alt="" />
+            <p>Fruits & Veges</p>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="topHead">
+            <div class="leftHead">
+                <p>Newly Arrived Brands</p>
+            </div>
+            <div class="rightHead">
+                <p>View All Categories</p>
+                <div class="arrows">
+                    <i class="fa-solid fa-caret-down fa-rotate-90"></i>
+                    <i class="fa-solid fa-caret-down fa-rotate-270"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="brands">
+        <div class="brand">
+            <img src="images/thumb-tuna.jpg" alt="" />
+            <div class="brand-text">
+                <p>Amber Jar</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="brand">
+            <img src="images/thumb-herb.jpg" alt="" />
+            <div class="brand-text">
+                <p>Amber Jar</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="brand">
+            <img src="images/thumb-honey.jpg" alt="" />
+            <div class="brand-text">
+                <p>Amber Jar</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+        <div class="brand">
+            <img src="images/thumb-junk.jpg" alt="" />
+            <div class="brand-text">
+                <p>Amber Jar</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div class="topHead">
+            <div class="leftHead">
+                <p>Trending Products</p>
+            </div>
+            <div class="rightHead">
+                <ul class="items">
+                    <li><a href="#" class="active">ALL</a></li>
+                    <li><a href="#">FRUITS & VEGES</a></li>
+                    <li><a href="#">JUICES</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="cards">
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-bananas.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-avocado.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-biscuits.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-cucumber.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-orange-juice.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-raspberries.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-tomatoes.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-tomatoketchup.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-bananas.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <img src="images/thumb-bananas.png" alt="" />
+                <div class="overlay-img-text">
+                    <p>-15%</p>
+                    <i class="fa-regular fa-heart"></i>
+                </div>
+            </div>
+            <div class="details">
+                <p class="pname">Sunstar Fresh Melon Juice</p>
+                <div class="detail">
+                    <p class="unit">1 UNIT</p>
+                    <i class="fa-solid fa-star"></i>
+                    <p class="rate">4.5</p>
+                </div>
+            </div>
+            <div class="price">
+                <p>$18.00</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="owner-details">
+        <div class="socials">
+            <div class="brand-image">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="social">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-amazon"></i>
+            </div>
+        </div>
+        <div class="services">
+            <h4>Ultras</h4>
+            <div class="sub-service">
+                <p>About Us</p>
+                <p>Conditions</p>
+                <p>Our Journals</p>
+                <p>Careers</p>
+                <p>Affiliate Programme</p>
+                <p>Ultras Press</p>
+            </div>
+        </div>
+        <div class="services">
+            <h4>Customer Services</h4>
+            <div class="sub-service">
+                <p>FAQ</p>
+                <p>Contact</p>
+                <p>Privacy Policy</p>
+                <p>Returns & Refunds</p>
+                <p>Cookies & Guidelines</p>
+                <p>Delivery Information</p>
+            </div>
+        </div>
+        <div class="services">
+            <h4>Subscribe Us</h4>
+            <p>Subscribe to our newsletter to get updates </p>
+            <p>about our grand offers</p>
+            <div class="filler">
+                <input type="text" placeholder="Email Address">
+                <button>Subscribe</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Foodmart. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>
