@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 const SECRET = "secret";
 const app = express();
-app.listen(8080, () => {
+app.listen(8081, () => {
   console.log("Server started");
 });
 let users = [];
